@@ -1,1 +1,137 @@
+@import "/home/cameron/.config/colors/colors.css";
 
+* {
+    font-family: "Jettbrains Nerd Mono", "Noto Sans CJK JP";
+    font-size: 18;
+    font-weight: bold;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: alpha(@background, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main modules */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#tray {
+    background-color: alpha(@background, 0.65);
+    color: @on_surface;
+    border: 0px solid @primary;
+    border-radius: 0px;
+    margin: 3px 3px;
+    padding: 0 5px;
+    min-height: 24px;
+}
+
+/* Exit button */
+#custom-exit {
+    background: @background;
+    color: @red;
+    border: 0px solid @primary;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 4px 4px;
+    background-color: @border;
+}
+
+/* Clock */
+#clock {
+    padding: 0 25px;
+    color: @primary;
+    border-radius: 10px;
+    background-color: @border;
+}
+
+#custom-launcher {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #1793d1; /* Arch Linux blue */
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    color: @outline;
+    font-size: 16px;
+    padding: 0 6px;
+    margin: 1px;
+}
+
+#workspaces button.active {
+    background-color: @border;
+    color: @surface;
+    border-radius: 10px;
+}
+
+#workspaces button.persistent {
+    color: @accent;
+}
+
+/* CPU / Memory */
+#cpu {
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    margin-right: 0;
+    color: @cyan;
+    background-color: @border;
+}
+
+#memory {
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    margin-left: 0;
+    color: @green;
+    background-color: @border;
+}
+
+/* Individual modules */
+#network { 
+    color: @purple;
+    border-radius: 10px;
+    background-color: @border;
+}
+
+#battery {
+     color: @blue;
+     border-radius: 10px;
+     background-color: @border;
+     border-left: none;
+     margin-left: 0;
+}
+#pulseaudio {
+     color: @pink;
+     border-radius: 10px;
+     background-color: @border; 
+     border-right: none;
+     margin-right: 0;
+}
+
+#tray {
+    padding: 0 8px;
+    background-color: @border
+}
+
+/* Tooltips */
+tooltip {
+    background: @surface_container;
+    border: 1px solid @primary;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 8px;
+}
