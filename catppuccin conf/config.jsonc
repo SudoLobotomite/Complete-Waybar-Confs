@@ -1,1 +1,93 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "height": 15,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "fixed-center": true,
 
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [  
+        "tray",
+        "network", 
+        "group/hardware",
+        "pulseaudio",
+        "battery", 
+        "custom/exit"
+    ],
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "custom/exit":{
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": { "*" : 5 },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰊠", "2": "󰊠", "3": "󰊠", "4": "󰊠", "5": "󰊠",
+            "6": "󰊠", "7": "󰊠", "8": "󰊠", "9": "󰊠", "10": "󰊠",
+            "active": "󰮯",
+            "default": "󰊠"
+        }
+    },
+
+    "clock": {
+        "format": "<span>󰥔 </span>{:%I:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "eww open --toggle notif-menu"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "IP: {ipaddr}",
+        "on-click": "eww open --toggle wifi-menu"
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": ["cpu", "memory"]
+    },
+
+    "cpu": {
+    "format": "󰍛 {usage}%", "interval": 2,
+    "on-click": "eww open --toggle cpu-monitor"
+    },
+    "memory": { 
+        "format": "󰘚 {percentage}%", "interval": 2,
+        "on-click": "eww open --toggle mem-monitor"
+},
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": { "default": ["", "", ""] },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": { "spacing": 8 }
+}
