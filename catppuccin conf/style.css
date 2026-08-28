@@ -1,16 +1,17 @@
 @import "/home/cameron/.config/colors/colors.css";
 
 * {
-    font-family: "Jettbrains Nerd Mono", "Noto Sans CJK JP";
+    font-family: "Monocraft";
     font-size: 18;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
-    margin: 0;
-    padding: 0;
+    border-radius: 999px;
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 window#waybar {
-    background-color: alpha(@background, 1);
+    background-color: alpha(@background, 0);
     margin: 0px;
     padding: 0px;
 }
@@ -27,18 +28,18 @@ window#waybar {
     background-color: alpha(@background, 0.65);
     color: @on_surface;
     border: 0px solid @primary;
-    border-radius: 0px;
-    margin: 3px 3px;
-    padding: 0 5px;
+    border-radius: 999px;
+    margin: 4px 4px;
+    padding: 0 10px;
     min-height: 24px;
 }
 
 /* Exit button */
 #custom-exit {
-    background: @background;
+    /*background: @background;*/
     color: @red;
     border: 0px solid @primary;
-    border-radius: 10px;
+    border-radius: 999px;
     padding: 0px 10px;
     margin: 4px 4px;
     background-color: @border;
@@ -46,34 +47,45 @@ window#waybar {
 
 /* Clock */
 #clock {
-    padding: 0 25px;
+    padding: 0 10px;
+    margin: 4px 4px;
     color: @primary;
-    border-radius: 10px;
+    border-radius: 999px;
     background-color: @border;
 }
 
 #custom-launcher {
-    font-size: 16px;
+    font-size: 20px;
     padding: 0 10px;
+    margin: 4px 4px;
     color: #1793d1; /* Arch Linux blue */
+    /*background: @background;*/
+    background-color: @border;
+    border-radius: 999px;
 }
 
 /* Workspaces */
 #workspaces {
-    padding: 0 5px;
+    padding: 0 10px;
+    margin: 4px 4px;
+    background: @background;
+    background-color: @border;
+    border-radius: 999px;
 }
 
 #workspaces button {
     color: @outline;
     font-size: 16px;
-    padding: 0 6px;
-    margin: 1px;
+    padding: 0 10px;
+    margin: 4px 0px;
 }
 
 #workspaces button.active {
-    background-color: @border;
+    background-color: @background-alt;
     color: @surface;
-    border-radius: 10px;
+    border-radius: 999px;
+    padding: 0 10px;
+    margin: 4px 4px;
 }
 
 #workspaces button.persistent {
@@ -82,45 +94,56 @@ window#waybar {
 
 /* CPU / Memory */
 #cpu {
-    border-radius: 10px 0 0 10px;
+    border-radius: 999px 0 0 999px;
     border-right: none;
     margin-right: 0;
     color: @cyan;
     background-color: @border;
+    padding: 0 10px;
+    margin: 4px 0px;
 }
 
 #memory {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 999px 999px 0;
     border-left: none;
     margin-left: 0;
     color: @green;
     background-color: @border;
+    padding: 0 10px;
+    margin: 4px 0px;
 }
 
 /* Individual modules */
 #network { 
     color: @purple;
-    border-radius: 10px;
+    border-radius: 999px;
     background-color: @border;
+    padding: 0 10px;
+    margin: 4px 4px;
 }
 
 #battery {
      color: @blue;
-     border-radius: 10px;
+     border-radius: 0 999px 999px 0;
      background-color: @border;
      border-left: none;
      margin-left: 0;
+     padding: 0 10px;
+     margin: 4px 0px;
 }
 #pulseaudio {
      color: @pink;
-     border-radius: 10px;
+     border-radius: 999px 0 0 999px;
      background-color: @border; 
      border-right: none;
      margin-right: 0;
+     padding: 0 10px;
+     margin: 4px 0px;
 }
 
 #tray {
-    padding: 0 8px;
+    padding: 0 10px;
+    margin: 4px 4px;
     background-color: @border
 }
 
