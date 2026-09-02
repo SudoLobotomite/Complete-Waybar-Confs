@@ -1,0 +1,160 @@
+/*@import "/home/cameron/.config/colors/colors.css";*/
+
+* {
+    font-family: "Monocraft";
+    font-size: 13;
+    font-weight: normal;
+    border: none;
+    border-radius: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+window#waybar {
+    background-color: alpha(#000000, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main modules */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#tray {
+    background-color: alpha(@background, 0);
+    color: @on_surface;
+    border: 0px solid @primary;
+    border-radius: 999px;
+    margin: 4px 4px;
+    padding: 0 10px;
+    min-height: 24px;
+}
+
+/* Exit button */
+#custom-exit {
+    /*background: @background;*/
+    color: @white;
+    border: 0px solid @primary;
+    border-radius: 999px;
+    padding: 0px 10px;
+    margin: 4px 4px;
+    background-color: alpha(@background, 0);
+}
+
+/* Clock */
+#clock {
+    padding: 0 10px;
+    margin: 4px 4px;
+    color: @primary;
+    border-radius: 999px;
+    background-color: alpha(@background, 0);
+}
+
+#custom-launcher {
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 4px 4px;
+    color: #ffffff; /* Arch Linux blue */
+    /*background: @background;*/
+    background-color: alpha(@background, 0);
+    border-radius: 999px;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 10px;
+    margin: 4px 4px;
+    background: @background;
+    background-color: alpha(@background, 0);
+    border-radius: 999px;
+}
+
+#workspaces button {
+    background-color: #000000;
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 2px 0px;
+}
+
+#workspaces button.active {
+    background-color: alpha(@border, 1);
+    color: @surface;
+    border-radius: 0px;
+    padding: 0 10px;
+    margin: 4px 4px;
+}
+
+#workspaces button.persistent {
+    color: @foreground;
+}
+
+/* CPU / Memory */
+#cpu {
+    border-radius: 999px 0 0 999px;
+    border-right: none;
+    margin-right: 0;
+    color: @foreground;
+    background-color: alpha(@background, 0);
+    padding: 0 10px;
+    margin: 4px 0px;
+}
+
+#memory {
+    border-radius: 0 999px 999px 0;
+    border-left: none;
+    margin-left: 0;
+    color: @foreground;
+    background-color: alpha(@background, 0);
+    padding: 0 10px;
+    margin: 4px 0px;
+}
+
+/* Individual modules */
+#network { 
+    color: @foreground;
+    border-radius: 999px;
+    background-color: alpha(@background, 0);
+    padding: 0 10px;
+    margin: 4px 4px;
+}
+
+#battery {
+     color: @foreground;
+     border-radius: 0 999px 999px 0;
+     background-color: alpha(@background, 0);
+     border-left: none;
+     margin-left: 0;
+     padding: 0 10px;
+     margin: 4px 0px;
+}
+#pulseaudio {
+     color: @foreground;
+     border-radius: 999px 0 0 999px;
+     background-color: alpha(@background, 0);
+     border-right: none;
+     margin-right: 0;
+     padding: 0 10px;
+     margin: 4px 0px;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 4px 4px;
+    background-color: alpha(@background, 0);
+}
+
+/* Tooltips */
+tooltip {
+    background: @surface_container;
+    border: 1px solid @primary;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 8px;
+}
